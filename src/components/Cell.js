@@ -1,5 +1,8 @@
+import {StyledCell} from "./styles/StyledCell";
+import {tetrominos} from "../tetrominos";
+
 const Cell = ({type}) => (
-    <div>cell</div>
+    <StyledCell type={type} color={tetrominos[type].color}>cell</StyledCell>
 )
 
 export default Cell
