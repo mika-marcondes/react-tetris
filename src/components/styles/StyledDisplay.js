@@ -6,7 +6,7 @@ export const StyledDisplay = styled.div`
   justify-content: center;
   margin: 0 0 20px 0;
   padding: 20px;
-  border: 3px solid #fff;
+  border: 2px solid #939393;
   min-height: 30px;
   width: 100%;
   color: ${props => (props.gameOver ? 'red' : 'white')};
