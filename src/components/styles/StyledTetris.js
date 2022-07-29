@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import bgImg from "../../img/bg.png"
+import bgImg from "../../img/newbg.jpg"
 
 export const StyledTetrisWrapper = styled.div`
   display: block;
   width: 100vw;
   height: 100vh;
-  background: url(${bgImg}) #000;
+  background: #78868c url(${bgImg});
   background-size: cover;
+  background-blend-mode: multiply;
 `
 
 export const StyledTetris = styled.div`
