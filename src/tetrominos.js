@@ -58,8 +58,8 @@ export const tetrominos = {
     }
 }
 
-export const randomShape = () => {
-    const shapes = 'IJLOSTZ'
-    const randomShape = shapes[Math.floor(Math.random() * shapes.length)]
+export const randomTetromino = () => {
+    const tetrominosPieces = 'IJLOSTZ'
+    const randomShape = tetrominosPieces[Math.floor(Math.random() * tetrominosPieces.length)]
     return tetrominos[randomShape]
 }
