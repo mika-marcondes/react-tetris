@@ -18,10 +18,9 @@ export const usePlayer = () => {
     }
 
     const resetPlayer = useCallback(() => {
-        // noinspection JSCheckFunctionSignatures
         setPlayer({
-            pos: {x: stageWidth / 2 - 2},
-            shape: randomTetromino.shape,
+            pos: {x: stageWidth / 2 - 2, y: 0},
+            tetromino: randomTetromino().shape,
             collided: false,
         })
     }, [])
