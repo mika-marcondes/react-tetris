@@ -27,7 +27,7 @@ export const useStage = (player, resetPlayer) => {
 
         setStage(prevState => updateStage(prevState))
 
-    }, [player.collided, player.pos.x, player.pos.y, player.tetromino])
+    }, [player])
 
     return [stage, setStage]
 }
