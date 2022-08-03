@@ -9,6 +9,17 @@ export const usePlayer = () => {
         collided: false,
     })
 
+    const rotate = (matrix, dir) => {
+        // Make the rows became cols
+        const rotatedTetro = matrix.map((_, index) =>
+            matrix.map(col => col[index])
+        )
+    }
+
+    const playerRotate = (state, dir) => {
+
+    }
+
     const updatePlayerPos = ({x, y, collided}) => {
         setPlayer(prevState => ({
             ...prevState,
@@ -19,7 +30,7 @@ export const usePlayer = () => {
 
     const restartPlayer = useCallback(() => {
         setPlayer({
-            pos: { x: stageWidth / 2 - 2, y: 0 },
+            pos: {x: stageWidth / 2 - 2, y: 0},
             tetromino: randomTetromino().shape,
             collided: false,
         })
