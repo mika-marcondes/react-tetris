@@ -22,12 +22,15 @@ export const useStage = (player, resetPlayer) => {
                     }
                 })
             })
+            if (player.collided) {
+                resetPlayer()
+            }
             return newStage
         }
 
-        setStage(prevState => updateStage(prevState))
+        setStage(prevStage => updateStage(prevStage))
 
-    }, [player])
+    }, [player, resetPlayer])
 
     return [stage, setStage]
 }
