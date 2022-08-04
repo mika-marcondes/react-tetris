@@ -26,7 +26,7 @@ export const usePlayer = () => {
         const pos = clonedPlayer.pos.x
         let offset = 1
 
-        while(detectCollision(clonedPlayer, state, {x: 0, y: 0})) {
+        while (detectCollision(clonedPlayer, state, {x: 0, y: 0})) {
             clonedPlayer.pos.x += offset
             offset = -(offset + (offset > 0 ? 1 : -1))
             if (offset > clonedPlayer.tetromino[0].length) {
@@ -35,7 +35,6 @@ export const usePlayer = () => {
                 return
             }
         }
-
 
         setPlayer(clonedPlayer)
     }
