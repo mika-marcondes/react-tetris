@@ -1,5 +1,6 @@
 import {tetrominos} from "../tetrominos";
 import styled from "styled-components"
+import React from "react";
 
 const Cell = ({type}) => (
     <StyledCell type={type} color={tetrominos[type].color}></StyledCell>
@@ -15,4 +16,4 @@ const StyledCell = styled.div`
   border-left-color: rgba(${props => props.color}, 0.3);
 `
 
-export default Cell
+export default React.memo(Cell)
