@@ -17,15 +17,15 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.4.1
 
+    - name: NPM Install 
+      run: npm install
+
+    - name: NPM Build 
+      run: npm run build
+    
     - name: Deploy with gh-pages
       run: |
         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: NPM Install 
-      run: npm install
-    
-    - name: Build
-      run: npm run deploy
