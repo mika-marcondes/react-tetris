@@ -17,6 +17,9 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.4.1
 
+    - name: Configure Git
+      run: git config --global user.email "bot@iamabot.com" && git config --global user.name "Super Deployer Bot - LOL"
+
     - name: NPM Install 
       run: npm install
     
